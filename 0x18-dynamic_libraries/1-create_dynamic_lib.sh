@@ -1,4 +1,3 @@
-#!/usr/bin/bash
-gcc -Wall -pedantic -Werror -Wextra -fPIC -c *.c
-gcc -shared -o liball.so *.o
-export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+#!/bin/bash
+gcc *.c -c -fPIC
+gcc *.o -shared -o libdynamic.so
